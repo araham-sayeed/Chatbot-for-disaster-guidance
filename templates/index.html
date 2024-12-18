@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLP Chatbot</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }   
+
+.chat-container {
+    background-color: #fff;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #f57c00; /* Orange color */
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.chat-box {
+    height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fafafa; /* Light background for chat box */
+    border-radius: 8px;
+}
+
+.chat-box div {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.user-message {
+    background-color: #ff5722; /* Bright orange for user messages */
+    color: #fff;
+    text-align: right;
+    max-width: 75%;
+    margin-left: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.bot-message {
+    background-color: #333; /* Black for bot messages */
+    color: #fff;
+    text-align: left;
+    max-width: 75%;
+    margin-right: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#message-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #f57c00; /* Orange background for button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e65100; /* Darker orange for hover effect */
+}
+
+</style>
+</head>
+<body>
+    <div class="chat-container">
+        <h1>Disaster Management Guide</h1>
+        <div id="chat-box" class="chat-box"></div>
+        <input type="text" id="message-input" placeholder="Type your message here...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        function sendMessage() {
+            let message = document.getElementById('message-input').value;
+            let chatBox = document.getElementById('chat-box');
+            
+            // Add the user's message to the chat box
+            let userMessage = document.createElement('div');
+            userMessage.className = 'user-message';
+            userMessage.innerHTML = message;
+            chatBox.appendChild(userMessage);
+            
+            // Clear the input field
+            document.getElementById('message-input').value = '';
+
+            // Send the message to the backend
+            fetch('/get-response', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'message=' + encodeURIComponent(message),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);  // Log the data to ensure it's correct
+            
+                let botMessage = document.createElement('div');
+                botMessage.className = 'bot-message';
+                botMessage.innerHTML = `<strong>Bot:</strong> ${data.text}<br><small>${data.action}</small>`;
+                chatBox.appendChild(botMessage);
+            
+                // Scroll to the bottom of the chat
+                chatBox.scrollTop = chatBox.scrollHeight;
+            });
+        }
+    </script>
+</body>
+</html>

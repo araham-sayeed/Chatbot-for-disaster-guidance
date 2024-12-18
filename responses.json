@@ -1,0 +1,105 @@
+{
+    "responses": [
+      {
+        "key": "where can i find help",
+        "text": "Stay where you are and use our app's SOS function to seek assistance. Rescue teams will be there as soon as possible.",
+        "action": "Press the SOS button in the app to send your location to first responders."
+      },
+      {
+        "key": "what exactly happened",
+        "text": "You have recently been affected by a [natural disaster]. Stay calm and follow the instructions carefully.",
+        "action": "Navigate to the Instructions page on our app for further guidance."
+      },
+      {
+        "key": "what should i do next",
+        "text": "Follow the instructions provided in the app and use the SOS function if you require assistance.",
+        "action": "Go to the Instructions and Do's & Don'ts page on our app for detailed steps."
+      },
+      {
+        "key": "how can i stay informed",
+        "text": "The app will provide real-time information about the situation.",
+        "action": "Visit the Information and Live Feed page in the app for ongoing updates."
+      },
+      {
+        "key": "safe places nearby",
+        "text": "Here are some nearby safe areas:",
+        "action": "View safe places on the map within the app: {SAFE_PLACES}"
+      },
+      {
+        "key": "how do I contact emergency services",
+        "text": "Use the emergency call button in the app to contact the nearest available emergency services.",
+        "action": "Click the direct call button to connect with emergency services."
+      },
+      {
+        "key": "what supplies do I need",
+        "text": "Gather essential supplies such as water, food, a flashlight, a first-aid kit, and extra batteries.",
+        "action": "Check the checklist of emergency supplies in the app."
+      },
+      {
+        "key": "how do I stay safe during the disaster",
+        "text": "Follow the safety tips provided in the app for your specific situation and avoid dangerous areas.",
+        "action": "Access safety guidelines specific to the disaster type in the app."
+      },
+      {
+        "key": "can I help others",
+        "text": "If you are in a safe condition, you can volunteer to assist others through our app's community support feature.",
+        "action": "Go to the volunteer signup page in the app to offer assistance."
+      },
+      {
+        "key": "what are the current updates",
+        "text": "Check the live updates section in the app for the latest information on the disaster situation.",
+        "action": "Visit the live updates page in the app."
+      },
+      {
+        "key": "how do I charge my phone without power",
+        "text": "Use a power bank or locate a nearby charging station if available.",
+        "action": "View a map of charging stations or explore portable charging options."
+      },
+      {
+        "key": "what to do if I am injured",
+        "text": "If injured, alert emergency medical services through the app and follow basic first-aid guidelines.",
+        "action": "Check the first-aid instructions and emergency call button in the app."
+      },
+      {
+        "key": "how do I find lost family members",
+        "text": "Use the family locator feature in the app or contact the nearest help center.",
+        "action": "Learn how to use the family locator feature in the app."
+      },
+      {
+        "key": "can I report a missing person",
+        "text": "Yes, use the app's missing persons report feature to alert authorities.",
+        "action": "Go to the missing persons report page in the app."
+      },
+      {
+        "key": "how do I access clean water",
+        "text": "Look for nearby clean water sources marked in the app or use purification methods if available.",
+        "action": "View a map of clean water sources and check the list of purification methods in the app."
+      },
+      {
+        "key": "where can I find food supplies",
+        "text": "Check the app for locations of food distribution centers near you.",
+        "action": "View a map of food supply centers within the app."
+      },
+      {
+        "key": "what precautions should I take after the disaster",
+        "text": "Avoid contaminated areas, follow health advisories, and stay updated through the app.",
+        "action": "Access a list of post-disaster precautions in the app."
+      },
+      {
+        "key": "how do I report unsafe conditions",
+        "text": "Use the hazard reporting feature in the app to alert authorities about unsafe conditions.",
+        "action": "Go to the hazard reporting page in the app."
+      },
+      {
+        "key": "can I donate supplies",
+        "text": "Yes, use the app's donation feature to contribute supplies to those in need.",
+        "action": "Go to the donation page in the app."
+      },
+      {
+        "key": "how do I protect myself from infections",
+        "text": "Follow hygiene guidelines, use protective gear if available, and stay updated on health advisories.",
+        "action": "Access hygiene tips and health updates in the app."
+      }
+    ]
+  }
+  
